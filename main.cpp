@@ -4,17 +4,17 @@
 // CIS 5 Week 06 · Even and odd
 
 int main() {
-	for (int even = 2; even <= 100; even ++) {
-		if (even % 2 == 0) {
-			std::cout << even << " is even" << std::endl;
-		}
+	int even = 0;
+	for (int i = 0; i <= 100; i += 2) {
+		even += i;
 	}
 	int odd = 1;
+	int sum = 0;
 	while (odd <= 99) {
-		if (odd % 2 != 0) {
-			std::cout << odd << " is odd" << std::endl;
-		}
-		odd ++;
+		sum += odd;
+		odd += 2;
 	}
+	std::cout << "Sum of even numbers: " << even << std::endl;
+	std::cout << "Sum of odd numbers: " << sum << std::endl;
 	return 0;
 }
